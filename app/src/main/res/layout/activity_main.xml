@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textHomeTitle"
+        android:layout_width="match_parent"
+        android:layout_height="70sp"
+        android:background="#EF934C"
+        android:gravity="center"
+        android:text="@string/appTitle"
+        android:textColor="#110F10"
+        android:textSize="45sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageButton
+        android:id="@+id/imgBtnFoodRoulette"
+        android:layout_width="140sp"
+        android:layout_height="140sp"
+        android:layout_marginBottom="352dp"
+        android:background="@color/white"
+        android:scaleType="centerInside"
+        android:src="@drawable/lottery"
+        app:layout_constraintBottom_toTopOf="@+id/adView"
+        app:layout_constraintEnd_toStartOf="@+id/imgBtnFoodMap"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textHomeTitle"
+        app:layout_constraintVertical_bias="0.476" />
+
+    <ImageButton
+        android:id="@+id/imgBtnFoodMap"
+        android:layout_width="120sp"
+        android:layout_height="120sp"
+        android:layout_marginBottom="372dp"
+        android:background="@drawable/map"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toTopOf="@+id/adView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/imgBtnFoodRoulette"
+        app:layout_constraintTop_toBottomOf="@+id/textHomeTitle" />
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:adUnitId="ca-app-pub-3940256099942544/6300978111"
+        app:adSize="BANNER"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

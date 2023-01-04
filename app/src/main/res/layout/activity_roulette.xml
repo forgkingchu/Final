@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".roulette">
+
+    <ImageView
+        android:id="@+id/img_wheel"
+        android:layout_width="289dp"
+        android:layout_height="281dp"
+        android:layout_marginTop="108dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/wheel" />
+
+    <ImageView
+        android:id="@+id/img_arrow"
+        android:layout_width="96dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="8dp"
+        android:rotation="-90"
+        android:rotationX="0"
+        android:rotationY="0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.485"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_wheel"
+        app:srcCompat="@drawable/arrow" />
+
+    <Button
+        android:id="@+id/btn_spin"
+        android:layout_width="92dp"
+        android:layout_height="56dp"
+        android:layout_marginBottom="84dp"
+        android:text="要吃啥"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.949"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tableRow2"
+        app:layout_constraintVertical_bias="0.072" />
+
+    <TextView
+        android:id="@+id/tv_eatWhat"
+        android:layout_width="411dp"
+        android:layout_height="105dp"
+        android:gravity="center"
+        android:text=""
+        android:textSize="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_spin"
+        app:layout_constraintVertical_bias="0.153" />
+
+    <ImageButton
+        android:id="@+id/btnBack"
+        android:layout_width="94dp"
+        android:layout_height="59dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/white"
+        android:scaleType="centerInside"
+        android:src="@drawable/back_icon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/favorList"
+        android:layout_width="208dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="4dp"
+        android:text="變更你的喜好清單"
+        app:layout_constraintBottom_toTopOf="@+id/tv_eatWhat"
+        app:layout_constraintEnd_toStartOf="@+id/btn_spin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tableRow2" />
+
+    <TableRow
+        android:id="@+id/tableRow"
+        android:layout_width="409dp"
+        android:layout_height="57dp"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_arrow">
+
+        <TextView
+            android:id="@+id/Green"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_margin="5sp"
+            android:background="#5CAD52"
+            android:gravity="center"
+            android:text="Green" />
+
+        <TextView
+            android:id="@+id/DarkBlue"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_margin="5sp"
+            android:background="#1E57AE"
+            android:gravity="center"
+            android:text="DarkBlue" />
+
+        <TextView
+            android:id="@+id/Orange"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_margin="5sp"
+            android:background="#E6672C"
+            android:gravity="center"
+            android:text="Orange" />
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow2"
+        android:layout_width="416dp"
+        android:layout_height="58dp"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tableRow">
+
+        <TextView
+            android:id="@+id/Gray"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_margin="5sp"
+            android:background="#A8A4A2 "
+            android:gravity="center"
+            android:text="Gray" />
+
+        <TextView
+            android:id="@+id/Yellow"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:background="#FAC21E "
+            android:gravity="center"
+            android:text="Yellow" />
+
+        <TextView
+            android:id="@+id/LiteBlue"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:background="#29A4D3 "
+            android:gravity="center"
+            android:text="LiteBlue" />
+    </TableRow>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
